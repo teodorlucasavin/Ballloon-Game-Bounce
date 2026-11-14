@@ -4,6 +4,6 @@ What it's about: The game features a balloon that flies through the sky. You nee
 
 Controls: arrow keys (to make the circle shield move and bounce/push away the cubes.)
 
-itch.io link: 
+itch.io link: https://teodorlucasavin.itch.io/balloon-game
 
 team and credits: Savin Teodor & Tudor Ana
