@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://coeup3vfx1dxi"]
+
+[ext_resource type="Script" uid="uid://c6efoekq77eqx" path="res://fundal.gd" id="1_epypp"]
+[ext_resource type="Script" uid="uid://jdmhi2fktf0i" path="res://main.gd" id="1_hqns4"]
+[ext_resource type="Texture2D" uid="uid://bnenn5jrkjl2a" path="res://WhatsApp Image 2026-11-14 at 14.40.24 (5).jpeg" id="2_d21ai"]
+[ext_resource type="Texture2D" uid="uid://b5xd1x4eaoim8" path="res://WhatsApp Image 2026-11-14 at 14.40.24 (7).jpeg" id="3_rj586"]
+[ext_resource type="Texture2D" uid="uid://cyn5n2g87pvgk" path="res://e8a52663-cf11-4046-b075-f89bcf0a16c1-removebg-preview.png" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://blw5wuig0cpag" path="res://WhatsApp Image 2026-11-14 at 14.40.24 (6).jpeg" id="4_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://d285w50jr1b84" path="res://WhatsApp Image 2026-11-14 at 14.40.24 (8).jpeg" id="5_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://nk8r00c5jf24" path="res://WhatsApp Image 2026-11-14 at 14.40.25 (1).jpeg" id="6_hqns4"]
+[ext_resource type="Script" uid="uid://c4jyutevns2sf" path="res://balon.gd" id="7_ir8iy"]
+[ext_resource type="Script" uid="uid://7e0v62ua218a" path="res://scut.gd" id="9_hqns4"]
+[ext_resource type="Texture2D" uid="uid://dv2wlwjeo2mkr" path="res://7d52bd00-a7fb-4eb4-a36a-a92cedd2a0f5-removebg-preview.png" id="10_x0ka3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vicex"]
+radius = 35.014282
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aui74"]
+radius = 15.524175
+
+[node name="main" type="Node2D" unique_id=671067936]
+script = ExtResource("1_hqns4")
+
+[node name="fundal" type="Node2D" parent="." unique_id=763046163]
+script = ExtResource("1_epypp")
+
+[node name="fundal1" type="Sprite2D" parent="fundal" unique_id=609558751]
+position = Vector2(0.99999905, 2590)
+scale = Vector2(5.7599998, 6.480001)
+texture = ExtResource("6_hqns4")
+centered = false
+
+[node name="fundal2" type="Sprite2D" parent="fundal" unique_id=213321293]
+position = Vector2(0, 1942.9999)
+scale = Vector2(5.7599998, 6.48)
+texture = ExtResource("5_ir8iy")
+centered = false
+
+[node name="fundal3" type="Sprite2D" parent="fundal" unique_id=965270885]
+position = Vector2(0, 1296)
+scale = Vector2(5.7599998, 6.48)
+texture = ExtResource("4_4d7sh")
+centered = false
+
+[node name="fundal4" type="Sprite2D" parent="fundal" unique_id=1088321879]
+position = Vector2(1, 647)
+scale = Vector2(5.76, 6.48)
+texture = ExtResource("3_rj586")
+centered = false
+
+[node name="fundal5" type="Sprite2D" parent="fundal" unique_id=983847981]
+position = Vector2(0, -1.0164395e-20)
+scale = Vector2(5.7600007, 6.4800005)
+texture = ExtResource("2_d21ai")
+centered = false
+
+[node name="balon" type="Area2D" parent="." unique_id=1299212085]
+script = ExtResource("7_ir8iy")
+
+[node name="Sprite2D" type="Sprite2D" parent="balon" unique_id=764273403]
+position = Vector2(361.00003, 430)
+scale = Vector2(2.175, 2.175)
+texture = ExtResource("4_0hol4")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="balon" unique_id=217848483]
+position = Vector2(585, 513)
+shape = SubResource("CircleShape2D_vicex")
+
+[node name="scut" type="AnimatableBody2D" parent="." unique_id=2125985427 groups=["scut"]]
+position = Vector2(-26, -40)
+script = ExtResource("9_hqns4")
+
+[node name="scut" type="Sprite2D" parent="scut" unique_id=296949320]
+position = Vector2(583, 458.99997)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("10_x0ka3")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scut" unique_id=1147141451]
+position = Vector2(614, 477)
+shape = SubResource("CircleShape2D_aui74")
+
+[node name="TimerSpawn" type="Timer" parent="." unique_id=845199738]
+wait_time = 2.0
+autostart = true
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=2010492792]
+
+[node name="ScorLabel" type="Label" parent="UI" unique_id=1411224322]
+offset_left = 378.0
+offset_top = 23.0
+offset_right = 760.475
+offset_bottom = 46.0
+scale = Vector2(2.405, 2.405)
+text = "0"

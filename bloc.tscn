@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cli030uftnj37"]
+
+[ext_resource type="Script" uid="uid://cd7isac55oxcl" path="res://bloc.gd" id="1_8jbc1"]
+[ext_resource type="Texture2D" uid="uid://s8my4rcd3n3u" path="res://2890566e-63f9-4f55-958c-0a2f045621e2-removebg-preview.png" id="1_wh2cu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(74, 67)
+
+[node name="bloc" type="RigidBody2D" unique_id=1809248628 groups=["bloc"]]
+gravity_scale = 0.0
+lock_rotation = true
+continuous_cd = 1
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_8jbc1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=791280404]
+texture = ExtResource("1_wh2cu")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=218693301]
+position = Vector2(95, 56.5)
+shape = SubResource("RectangleShape2D_lfkbx")

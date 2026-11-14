@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bqof7whenkv4h"]
+
+[ext_resource type="Script" uid="uid://b6tjgaulocj4" path="res://ending.gd" id="1_fsb5k"]
+
+[node name="Ending" type="Control" unique_id=2094768740]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fsb5k")
+
+[node name="Fundal" type="ColorRect" parent="." unique_id=743609073]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09803922, 0.15686275, 0.25490198, 1)
+
+[node name="TitluLabel" type="Label" parent="." unique_id=175040298]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 120.0
+offset_right = 774.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
+
+[node name="ScorLabel" type="Label" parent="." unique_id=1618737224]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 230.0
+offset_right = 621.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 40
+text = "Score: 0"
+
+[node name="PlayButton" type="Button" parent="." unique_id=1661742667]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 340.0
+offset_right = 690.0
+offset_bottom = 410.0
+text = "PLAY (Enter)"
